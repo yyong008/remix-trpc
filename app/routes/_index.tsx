@@ -23,10 +23,13 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>Welcome to Remix</h1>
-      {JSON.stringify(data)}
+      <span className="text-green-500">{JSON.stringify(data)}</span>
       <ul>
-        <li>
+        <li
+          className="text-green-400"
+        >
           <a
+            className="text-yellow-500"
             target="_blank"
             href="https://remix.run/tutorials/blog"
             rel="noreferrer"

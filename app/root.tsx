@@ -11,6 +11,7 @@ import {
 import { cssBundleHref } from "@remix-run/css-bundle";
 
 import tailwind from '~/styles/tailwind.css'
+import { ClientOnly } from "./components/ClientOnly";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwind },
@@ -27,7 +28,7 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <ClientOnly fallback={<div />}>{() => <Outlet />}</ClientOnly>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

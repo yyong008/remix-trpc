@@ -3,11 +3,11 @@ import { useLoaderData } from "@remix-run/react";
 import { appRouter } from "~/trpc/router";
 
 export const loader = async () => {
-  const caller = appRouter.createCaller({})
-  const u = await caller.users.create({ email: 'a@t.com', password: 'rtdfgtre'})
+  // const caller = appRouter.createCaller({})
+  // const u = await caller.users.create({ email: 'a@t.com', password: 'rtdfgtre'})
   return {
     title: "Remix App",
-    ...u
+    // ...u
   };
 }
 

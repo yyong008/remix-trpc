@@ -10,7 +10,7 @@ import {
 } from "@remix-run/react";
 import { cssBundleHref } from "@remix-run/css-bundle";
 
-import tailwind from '~/styles/tailwind.css'
+import tailwind from "~/styles/tailwind.css";
 import { ClientOnly } from "./components/ClientOnly";
 
 export const links: LinksFunction = () => [

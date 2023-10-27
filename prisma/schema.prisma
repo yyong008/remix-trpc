@@ -10,16 +10,19 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Uesr {
+model User {
   id Int @id @default(autoincrement())
   email String @unique
   name String
+  password String
   profile Profile?
+  createdAt DateTime @default(now())
+  updatedAt DateTime  @updatedAt
 }
 
 model Profile {
   id Int @id @default(autoincrement())
   bio String
-  user Uesr @relation(fields: [userId], references: [id])
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId Int @unique
 }

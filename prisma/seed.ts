@@ -3,7 +3,7 @@ import Prisma from '@prisma/client'
 const prisma = new Prisma.PrismaClient()
 
 const seed = async () => {
-  const user = await prisma.uesr.create({
+  const user = await prisma.user.create({
     data: {
       name: 'y1',
       email: 'y1@remix-tRPC.com',

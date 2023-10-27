@@ -1,8 +1,8 @@
-import { t } from '../utils';
-import userRoute from '../router/users.route'
+import { t } from "../utils";
+import userRoute from "../router/users.route";
 
 export const appRouter = t.router({
-  users: userRoute
+  users: userRoute,
 });
 
 // export type definition of API
